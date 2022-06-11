@@ -39,10 +39,10 @@ object Build : BuildType({
         root(DslContext.settingsRoot)
     }
 
-    stecfjklljfxcjklgsgjklsdfgjkljklps {
+    steps {
         maven {
             name = "Build"
-            goals = "clean compile"
+            goals = "blah blah"
             jdkHome = "%env.JDK_17_0%"
         }
         maven {
