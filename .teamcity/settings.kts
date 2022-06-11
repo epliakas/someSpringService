@@ -40,8 +40,13 @@ object Build : BuildType({
 
     steps {
         maven {
-            name = "Build and Test"
-            goals = "clean test"
+            name = "Build"
+            goals = "clean compile"
+            jdkHome = "%env.JDK_17_0%"
+        }
+        maven {
+            name = "Test"
+            goals = "test"
             jdkHome = "%env.JDK_17_0%"
         }
     }
