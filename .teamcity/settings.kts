@@ -58,6 +58,10 @@ object Build : BuildType({
             name = "Another Step"
             scriptContent = "echo Another World"
         }
+        script {
+            name = "Last Step"
+            scriptContent = "echo Bye World"
+        }
     }
 
     triggers {
