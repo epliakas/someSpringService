@@ -1,5 +1,6 @@
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildSteps.maven
+import jetbrains.buildServer.configs.kotlin.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
 
 /*
@@ -39,25 +40,19 @@ object Build : BuildType({
     }
 
     steps {
-        step {
-            maven {
-                name = "Build"
-                goals = "clean compile"
-                jdkHome = "%env.JDK_17_0%"
-            }
+        maven {
+            name = "Build"
+            goals = "clean compile"
+            jdkHome = "%env.JDK_17_0%"
         }
-        step {
-            maven {
-                name = "Test"
-                goals = "test"
-                jdkHome = "%env.JDK_17_0%"
-            }
+        maven {
+            name = "Test"
+            goals = "test"
+            jdkHome = "%env.JDK_17_0%"
         }
-        step {
-            script {
-                name = "Some Last Step"
-                scriptContent = "echo Doing Something"
-            }
+        script {
+            name = "Something Else"
+            scriptContent = "echo Hello World"
         }
     }
 
