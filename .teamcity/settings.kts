@@ -39,7 +39,7 @@ object Build : BuildType({
         root(DslContext.settingsRoot)
     }
 
-    steps {
+    stecfjklljfxcjklgsgjklsdfgjkljklps {
         maven {
             name = "Build"
             goals = "clean compile"
