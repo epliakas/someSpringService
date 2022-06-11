@@ -42,7 +42,7 @@ object Build : BuildType({
     steps {
         maven {
             name = "Build"
-            goals = "blah blah"
+            goals = "clean compile"
             jdkHome = "%env.JDK_17_0%"
         }
         maven {
@@ -58,6 +58,7 @@ object Build : BuildType({
             name = "Another Step"
             scriptContent = "echo Another World"
         }
+
     }
 
     triggers {
