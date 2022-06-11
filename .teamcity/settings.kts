@@ -53,6 +53,12 @@ object Build : BuildType({
                 jdkHome = "%env.JDK_17_0%"
             }
         }
+        step {
+            script {
+                name = "Some Last Step"
+                scriptContent = "echo Doing Something"
+            }
+        }
     }
 
     triggers {
